@@ -4,7 +4,7 @@ class Proc
   def curry(arity = self.arity)
     proc do |*args|
       if args.length < arity
-        proc { |*more_args| call(*args + more_args) }
+        proc { |*more_args| call(*args + more_args) }.curry(arity - args.length)
       else
         call(*args)
       end
