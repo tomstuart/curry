@@ -2,6 +2,8 @@ class Proc
   remove_method :curry
 
   def curry
-    # your implementation goes here
+    proc do |*args|
+      call(*args)
+    end
   end
 end
