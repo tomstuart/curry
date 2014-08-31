@@ -11,7 +11,7 @@ class Proc
       too_many_args = arity > number_of_args && !has_optional_args
 
       if too_few_args || too_many_args
-        raise ArgumentError, "wrong number of arguments (#{arity} for #{number_of_args})"
+        raise ArgumentError, "wrong number of arguments (#{arity} for #{number_of_args}#{'+' if has_optional_args})"
       end
     end
 
