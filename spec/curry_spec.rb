@@ -1,3 +1,5 @@
+require 'curry'
+
 RSpec.describe 'Proc#curry' do
   # These examples are from http://rubydoc.info/stdlib/core/Proc#curry-instance_method.
 
